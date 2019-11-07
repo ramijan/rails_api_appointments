@@ -34,14 +34,11 @@ client
 * id
 * email
 
-
 appointment
 * customer_id   foreign key
 * client_id   foreign key
 * start_at timestamps
 * end_at timestamps
-
-
 
 /appointments
 [
@@ -60,3 +57,8 @@ appointment
     # ...
   }
 ]
+
+
+## New feature
+/appointments?active=1
+--> this should return only future appointments
