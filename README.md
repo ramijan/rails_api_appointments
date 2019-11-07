@@ -1,46 +1,35 @@
 # README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+A toy rails api to explore setting up appointments endpoint
 
 
+### Data model
 
-
-customer
+```
+customers
 * id
 * full_name
+```
 
-client
+```
+clients
 * id
 * email
+```
 
-appointment
+```
+appointments
 * customer_id   foreign key
 * client_id   foreign key
 * start_at timestamps
 * end_at timestamps
+```
 
-/appointments
+### Endpoint
+`/appointments`
+
+Sample response:
+
+```
 [
   {
     start_at: '11:00 am',
@@ -57,8 +46,8 @@ appointment
     # ...
   }
 ]
+```
 
-
-## New feature
-/appointments?active=1
---> this should return only future appointments
+### New feature request
+`/appointments?active=1`
+Specifying active=1 on appointments endpoint should only return future appointments
